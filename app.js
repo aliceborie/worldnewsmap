@@ -33,8 +33,8 @@ app.use(function(req,res) {
 
 var httpServer = http.createServer(app);
 
-var ipaddress = '127.0.0.1';
-var port = 50000;
+var ipaddress = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
+var port = process.env.OPENSHIFT_NODEJS_PORT || 50000;
 
 httpServer.listen(
   port,

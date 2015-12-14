@@ -1,7 +1,10 @@
 {
   "name": "world-news-map",
   "version": "1.0.0",
-  "description": "M2c Final Project",
+  "description": "M2C Final Project",
+  "scripts": {
+    "start": "node app.js"
+  },
   "main": "app.js",
   "repository": {
     "type": "git",

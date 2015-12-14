@@ -1,7 +1,14 @@
 var mongoClient = require("mongodb").MongoClient;
 
+var db_name = 'world'
+
 // For mongo db running locally
-var connection_string = 'localhost:27017/world';
+var connection_string = 'localhost:27017/' + db_name;
+
+// For mongodb in openshift
+if(process.env.OPENSHIFT_MONGODB_DB_URL){
+  mongodb_connection_string = process.env.OPENSHIFT_MONGODB_DB_URL + db_name;
+}
 
 // Global variable of the connected database
 var db;
