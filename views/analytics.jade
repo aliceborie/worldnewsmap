@@ -1,0 +1,9 @@
+html
+  head
+    title= title
+  body
+    each country in analytics
+      h3
+        = ' ' + country.name
+        = ' (' + country.viewed + ' views)' 
+
